@@ -313,7 +313,7 @@ void GUI::print_info() {
 	std::cout << BLUE << UNDERLINE << "                                                                                                                                       " << std::endl << RESET;
 	std::cout << "Entry color meaning:\n";
 	std::cout << GREEN << "Green means Successfully finished task.\n" << RESET; 
-	std::cout << RED << "Red means Failed task." << RESET; 
+	std::cout << RED << "Red means Failed task.\n" << RESET; 
 	std::cout << "White means Active task.\n" << RESET; 
 
 	std::cout << BLUE << UNDERLINE << "                                                                                                                                       " << std::endl << RESET;
