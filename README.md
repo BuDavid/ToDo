@@ -1,1 +1,2 @@
 #TODO
+g++ main.cpp
