@@ -1,3 +1,13 @@
+#include <iostream>
+#include <sstream>
+#include <fstream>
+#include <vector>
+#include <chrono>
+#include <ctime>
+#include <string>
+#include <iomanip>
+#include <cstdlib>
+#include <unistd.h>
 #include "table.hpp"
 
 #define RESET   "\033[0m"
@@ -14,14 +24,12 @@
 
 class GUI {
 public:
-	GUI();
 	void clear();
 	void print(int idx = 1000);
 	ToDo* print_new_entry();
 	void print_options(bool op); 
 	void print_choose();
 	void print_info();
-	void take_input();
 	void start();
 	~GUI();
 private:

@@ -6,7 +6,6 @@
 
 class Table {
 public:
-	Table();
 	void fill_table();
 	void save_table();
 	void add_deadline(int idx, std::time_t time);

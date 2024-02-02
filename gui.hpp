@@ -1,9 +1,6 @@
 #include "gui.h"
 
-GUI::GUI() {
-}
-
-void GUI::take_input() {
+void GUI::start() {
 	table.fill_table();
 
 	while (true) {

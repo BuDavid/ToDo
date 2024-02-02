@@ -1,8 +1,5 @@
 #include "table.h"
 
-Table::Table() {
-}
-
 ToDo* Table::operator[] (int idx) {
 	return list[idx];
 }
