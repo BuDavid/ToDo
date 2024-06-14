@@ -1,8 +1,13 @@
+#include <iostream>
+#include <chrono>
+
 std::time_t gen_date();
 
 class ToDo {
 public:
 	ToDo();
+	~ToDo();
+public:
 	void clear();
 	void set_entry(std::string& entry);
 	std::string get_entry();
@@ -13,10 +18,8 @@ public:
 	std::time_t get_time();
 	std::time_t get_due_time();
 	bool too_late();
-	~ToDo();
 	std::string get_current_time();
 private:
-
 	std::string text;
 	std::time_t creation_time;
 	std::time_t due_time;

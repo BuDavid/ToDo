@@ -19,11 +19,5 @@ Entry colors represent their states:
 For more information the I| Info option can be used.
 
 # How to use
-```C++
-#include "gui.hpp"
-
-int main() {
-	GUI obj;
-	obj.start();
-}
+    Make a build directory and run cmake ..
 	

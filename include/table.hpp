@@ -1,3 +1,8 @@
+#ifndef TABLE_H_
+#define TABLE_H_
+
+#include <fstream>
+#include <vector>
 #include "todo.hpp"
 
 #define MAX_LINE 50
@@ -25,3 +30,5 @@ private:
 
 	std::vector<ToDo*> list;
 };
+
+#endif  // TABLE_H_

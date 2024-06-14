@@ -1,13 +1,7 @@
-#include <iostream>
-#include <sstream>
-#include <fstream>
-#include <vector>
-#include <chrono>
-#include <ctime>
-#include <string>
+#ifndef GUI_H_
+#define GUI_H_
+
 #include <iomanip>
-#include <cstdlib>
-#include <unistd.h>
 #include "table.hpp"
 
 #define RESET   "\033[0m"
@@ -34,6 +28,8 @@ public:
 	~GUI();
 private:
 	void get_deadline_in(std::string& ans, int min, int max, const std::string& op);
-
+private:
 	Table table;
 };
+
+#endif  // GUI_H_

@@ -1,4 +1,4 @@
-#include "table.h"
+#include "table.hpp"
 
 ToDo* Table::operator[] (int idx) {
 	return list[idx];

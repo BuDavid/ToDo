@@ -1,0 +1,25 @@
+# Ignore build directories and files
+build/
+bin/
+*.o
+*.out
+
+# Ignore IDE and editor files
+.vscode/
+.idea/
+*.suo
+*.user
+
+# Ignore compiled binaries and executables
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Ignore CMake build files
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+compile_commands.json
+Makefile
+
