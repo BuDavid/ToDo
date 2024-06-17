@@ -240,16 +240,16 @@ void GUI::print(int idx) {
 		if (i < 10) { 
 			std::cout << ' ';
 		}
-		std::cout << BLUE << i << ": "; 
+		std::cout << Color::BLUE << i << ": "; 
 		if (i == idx) {
-			std::cout << ">>" << UNDERLINE;
+			std::cout << ">>" << Color::UNDERLINE;
 		}
 		if (table[i]->is_done() == 1) {
-			std::cout << GREEN << table[i]->get_entry() << RESET;
+			std::cout << Color::GREEN << table[i]->get_entry() << Color::RESET;
 		} else if (table[i]->is_done() == 2) { 
-			std::cout << RED << table[i]->get_entry() << RESET;
+			std::cout << Color::RED << table[i]->get_entry() << Color::RESET;
 		} else {
-			std::cout << WHITE << table[i]->get_entry();
+			std::cout << Color::WHITE << table[i]->get_entry();
 		}
 
 		if (table[i]->get_due_time() > 0) {
@@ -259,9 +259,9 @@ void GUI::print(int idx) {
 			char buffer[20]; 
 			std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", timeInfo);
 			if (table[i]->is_done() == 1) {
-				std::cout << GREEN << buffer << RESET ;
+				std::cout << Color::GREEN << buffer << Color::RESET ;
 			} else {
-				std::cout << MAGENTA << buffer << RESET ;
+				std::cout << Color::MAGENTA << buffer << Color::RESET ;
 			}
 		} else {
 
@@ -270,50 +270,50 @@ void GUI::print(int idx) {
 
 			char buffer[20]; 
 			std::strftime(buffer, sizeof(buffer), "%Y-%m-%d %H:%M:%S", timeInfo);
-			std::cout << CYAN << buffer << RESET;
+			std::cout << Color::CYAN << buffer << Color::RESET;
 		}	
 
 		std::cout << std::endl;
 	}
-	std::cout << BLUE << UNDERLINE << "                                                                                                                                       " << std::endl << RESET;
+	std::cout << Color::BLUE << Color::UNDERLINE << "                                                                                                                                       " << std::endl << Color::RESET;
 }
 
 void GUI::print_options(bool op) {
 	if (!op) {
-		std::cout << RESET << BLUE << "A| " << YELLOW << "Add Entry         " 
-          << BLUE << "H| " << YELLOW << "Achieved Tasks         " 
-          << BLUE << "S| " << YELLOW << "Sort by Creation         "
-          << BLUE << "E| " << YELLOW << "Exit" << RESET << std::endl;
-
-		std::cout << BLUE << "D| " << YELLOW << "Due Tasks         " 
-		  << BLUE << "P| " << YELLOW << "Failed Tasks           " 
-          << BLUE << "U| " << YELLOW << "Sort by Urgency          "
-          << BLUE << "I| " << YELLOW << "Info             "
-          << BLUE << "C| " << YELLOW << "Choose" << RESET << std::endl;
+		std::cout << Color::RESET << Color::BLUE << "A| " << Color::YELLOW << "Add Entry          " 
+          << Color::BLUE << "H| " << Color::YELLOW << "Achieved Tasks         " 
+          << Color::BLUE << "S| " << Color::YELLOW << "Sort by Creation         "
+          << Color::BLUE << "E| " << Color::YELLOW << "Exit" << Color::RESET << std::endl;
+                                                                 
+		std::cout << Color::BLUE << "D| " << Color::YELLOW << "Due Tasks          " 
+		  << Color::BLUE << "P| " << Color::YELLOW << "Failed Tasks           " 
+          << Color::BLUE << "U| " << Color::YELLOW << "Sort by Urgency          "
+          << Color::BLUE << "I| " << Color::YELLOW << "Info             "
+          << Color::BLUE << "C| " << Color::YELLOW << "Choose" << Color::RESET << std::endl;
 
 	} else {
-        std::cout << BLUE << "C| " << YELLOW << "Change        "
-		  << BLUE << "D| " << YELLOW << "Delete        " 
-          << BLUE << "I| " << YELLOW << "Insert        "
-          << BLUE << "X| " << YELLOW << "Check/Uncheck        "
-          << BLUE << "E| " << YELLOW << "Exit" << RESET << std::endl;
+        std::cout << Color::BLUE << "C| " << Color::YELLOW << "Change        "
+		  << Color::BLUE << "D| " << Color::YELLOW << "Delete        " 
+          << Color::BLUE << "I| " << Color::YELLOW << "Insert        "
+          << Color::BLUE << "X| " << Color::YELLOW << "Check/Uncheck        "
+          << Color::BLUE << "E| " << Color::YELLOW << "Exit" << Color::RESET << std::endl;
 	}
 }
 
 void GUI::print_info() {	
 	std::system("clear");
 	std::cout << "Time color meaning:\n";
-	std::cout << GREEN << "Green means the entry was successsfully finished at that time!\n" << RESET; 
-	std::cout << MAGENTA << "Magenta shows the deadline of the entry\n" << RESET; 
-	std::cout << CYAN << "Cyan shows the creation date\n" << RESET; 
+	std::cout << Color::GREEN << "Green means the entry was successsfully finished at that time!\n" << Color::RESET; 
+	std::cout << Color::MAGENTA << "Magenta shows the deadline of the entry\n" << Color::RESET; 
+	std::cout << Color::CYAN << "Cyan shows the creation date\n" << Color::RESET; 
 
-	std::cout << BLUE << UNDERLINE << "                                                                                                                                       " << std::endl << RESET;
+	std::cout << Color::BLUE << Color::UNDERLINE << "                                                                                                                                       " << std::endl << Color::RESET;
 	std::cout << "Entry color meaning:\n";
-	std::cout << GREEN << "Green means Successfully finished task.\n" << RESET; 
-	std::cout << RED << "Red means Failed task.\n" << RESET; 
-	std::cout << "White means Active task.\n" << RESET; 
+	std::cout << Color::GREEN << "Green means Successfully finished task.\n" << Color::RESET; 
+	std::cout << Color::RED << "Red means Failed task.\n" << Color::RESET; 
+	std::cout << "White means Active task.\n" << Color::RESET; 
 
-	std::cout << BLUE << UNDERLINE << "                                                                                                                                       " << std::endl << RESET;
+	std::cout << Color::BLUE << Color::UNDERLINE << "                                                                                                                                       " << std::endl << Color::RESET;
 	std::cout << "Actions:\n";
 	std::cout << "A: Adds a new entry to the list.\n";
 	std::cout << "H: Shows Achieved tasks.\n";
@@ -324,15 +324,15 @@ void GUI::print_info() {
 	std::cout << "E: Exits the programme.\n";
 	std::cout << "Lets you Choose an entry for further manipulations.\n";
 
-	std::cout << BLUE << UNDERLINE << "                                                                                                                                       " << std::endl << RESET;
+	std::cout << Color::BLUE << Color::UNDERLINE << "                                                                                                                                       " << std::endl << Color::RESET;
 	std::cout << "C options\n";
 	std::cout << "C: Lets you change the entry text.\n";
 	std::cout << "D: Deletes the entry.\n";
 	std::cout << "I: Lets you Insert new element in chosen place.\n";
 	std::cout << "X: Lets you check/uncheck the entry\n";
 	std::cout << "E: Exits the choose state\n";
-	std::cout << BLUE << UNDERLINE << "                                                                                                                                       " << std::endl << RESET;
-	std::cout << BLUE << "E| " << YELLOW << "Exit" << RESET << std::endl;
+	std::cout << Color::BLUE << Color::UNDERLINE << "                                                                                                                                       " << std::endl << Color::RESET;
+	std::cout << Color::BLUE << "E| " << Color::YELLOW << "Exit" << Color::RESET << std::endl;
 
 	char ch = 0;
 	while (ch != 'E') {
@@ -342,9 +342,6 @@ void GUI::print_info() {
 	}
 }
 
-
-
-
 void GUI::clear() {
 	table.clear();
 }
@@ -352,5 +349,3 @@ void GUI::clear() {
 GUI::~GUI() {
 	clear();
 }
-	
-

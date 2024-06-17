@@ -5,11 +5,13 @@
 #include <vector>
 #include "todo.hpp"
 
-#define MAX_LINE 50
-#define DATA_FILE "entries.txt"
-#define DELIMIT "<:>" 
+const int MAX_LINE = 50;
+const std::string DATA_FILE = "entries.txt";
+const std::string DELIMIT = "<:>";
 
 class Table {
+public:
+	~Table();
 public:
 	void fill_table();
 	void save_table();
@@ -23,11 +25,10 @@ public:
 	void quicksort(int low, int high, bool option);
 	void sort_by_prior(int prior);
 	size_t size();
-	~Table();
 private:
 	std::vector<std::string> split(std::string& line, const std::string& delimiter);
 	int partition(int low, int high, bool option);
-
+private:
 	std::vector<ToDo*> list;
 };
 

@@ -39,7 +39,6 @@ std::time_t gen_date() {
 bool ToDo::too_late() {
     auto now = std::chrono::system_clock::now();
     std::time_t current_time = std::chrono::system_clock::to_time_t(now);
-
 	
 	if (current_time > due_time) {
 		return 1;
@@ -62,8 +61,3 @@ void ToDo::clear() {
 	done = 0;
 }
 
-ToDo::~ToDo() {
-	clear();
-}
-	
-	

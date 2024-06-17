@@ -2,19 +2,22 @@
 #define GUI_H_
 
 #include <iomanip>
+#include <string>
 #include "table.hpp"
 
-#define RESET   "\033[0m"
-#define RED     "\033[31m"
-#define GREEN   "\033[32m"
-#define YELLOW  "\033[33m"
-#define BLUE    "\033[34m"
-#define MAGENTA "\033[35m"
-#define CYAN    "\033[36m"
-#define UNDERLINE   "\033[4m"
-#define BOLD_RED    "\033[1;31m"
-#define BOLD_CYAN   "\033[1;36m"
-#define WHITE       "\033[37m"
+namespace Color {
+    const std::string RESET = "\033[0m";
+    const std::string RED = "\033[31m";
+    const std::string GREEN = "\033[32m";
+    const std::string YELLOW = "\033[33m";
+    const std::string BLUE = "\033[34m";
+    const std::string MAGENTA = "\033[35m";
+    const std::string CYAN = "\033[36m";
+    const std::string UNDERLINE = "\033[4m";
+    const std::string BOLD_RED = "\033[1;31m";
+    const std::string BOLD_CYAN = "\033[1;36m";
+    const std::string WHITE = "\033[37m";
+}
 
 class GUI {
 public:

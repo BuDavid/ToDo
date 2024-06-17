@@ -1,3 +1,7 @@
+#ifndef TODO_H_
+#define TODO_H_
+
+#include <string>
 #include <iostream>
 #include <chrono>
 
@@ -6,7 +10,6 @@ std::time_t gen_date();
 class ToDo {
 public:
 	ToDo();
-	~ToDo();
 public:
 	void clear();
 	void set_entry(std::string& entry);
@@ -26,3 +29,4 @@ private:
 	int done;
 };
 
+#endif  // TODO_H_
